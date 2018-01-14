@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="skyTexture"
+          src="https://19l7xqvl7yp48g21gowweyuk-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/shard-crane-vr.jpg"
+        >
+        <audio src="./song.mp3" autoplay preload />
+      </a-assets>
+      <a-entity
+        position="0 0 -15"
+        particle-system="preset: snow;color:gold; duration: 270;particleCount: 2000; opacity: 1;texture:https://raw.githubusercontent.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/star2.png"
+      />
+      <a-sky src="#skyTexture"/>
+      <a-sound
+        src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true"
+        position="-3 1 -4"
+      />
+    </a-scene>
+  </body>
+</html>
